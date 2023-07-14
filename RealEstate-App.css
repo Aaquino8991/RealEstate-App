@@ -12,10 +12,20 @@ body {
 
 #menu-box {
   width: 100%;
+  margin-top: -100px;
   text-align: center;
 }
 
 .search-bar {
   border-radius: 50px;
   background-color: #5C6278;
+}
+
+.search-bar:hover {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+
+.search-bar:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
 }
