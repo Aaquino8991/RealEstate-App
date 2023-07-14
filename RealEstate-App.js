@@ -9,4 +9,6 @@ fetch(url, {
     'X-RapidAPI-Key': myKey,
     'X-RapidAPi-Host': host
   }
-});
+})
+
+.then (res => res.json())
