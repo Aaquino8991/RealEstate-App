@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Create elements for each city
   function homeList(data) {
-    data.forEach(city => {
-      const element = document.createElement('div');
+    const element = document.createElement('ul');{
+    
+      for (let city of data) {
+      
       element.textContent = city;
-      document.getElementById('house-list');
-    })
+      document.getElementById('house-list').appendChild('li');
+      }
+    }
   }
   
   // Fetch data from API
