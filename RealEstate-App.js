@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   .then (res => res.json())
-  .then (data => console.log(data))
+  .then (data => homeList(data))
   .catch(error => console.error(error));
 });
