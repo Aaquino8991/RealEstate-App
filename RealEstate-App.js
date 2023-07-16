@@ -3,6 +3,10 @@ const host = config.HOST;
 
 const url = 'https://realty-in-us.p.rapidapi.com/locations/v2/auto-complete?input=new%20york&limit=10';
 
+function homeList(data) {
+  
+}
+
 fetch(url, {
   method: 'GET',
   headers: {
@@ -13,4 +17,4 @@ fetch(url, {
 
 .then (res => res.json())
 .then (data => console.log(data))
-.then(error => console.error(error));
+.catch(error => console.error(error));
