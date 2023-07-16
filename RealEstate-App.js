@@ -10,9 +10,13 @@
     
 //   })
 // }
-const list = document.querySelector('#wrapper')
 
-console.log(list)
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('house-list')
+
+  console.log(list)
+})
+
 
 // fetch(url, {
 //   method: 'GET',
