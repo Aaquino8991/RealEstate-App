@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create elements for each city
   function homeList(data) {
 
-    data.forEach(city => {
+    data.autocomplete.forEach(city => {
       const element = document.createElement('ul');
       element.textContent = city;
       document.getElementById('house-list').appendChild('ul')
@@ -28,4 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
   .then (res => res.json())
   .then (data => homeList(data))
   .catch(error => console.error(error));
-});
+},
+
+  document.getElementById('searchButton').addEventListener('click', () => {
+    const searchInput = document.getElementById('search-bar').value;
+    fetchData(searchInput);
+  })
+);
