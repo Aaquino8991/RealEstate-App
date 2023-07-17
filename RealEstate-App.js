@@ -8,12 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create elements for each city
   function homeList(data) {
     const element = document.createElement('ul');{
-    
-      for (let city of data) {
       
-      element.textContent = city;
-      document.getElementById('house-list').appendChild('li');
-      }
     }
   }
   

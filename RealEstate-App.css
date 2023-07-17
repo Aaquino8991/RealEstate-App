@@ -16,16 +16,16 @@ body {
   text-align: center;
 }
 
-.search-bar {
+#search-bar {
   border-radius: 50px;
   background-color: #5C6278;
 }
 
-.search-bar:hover {
+#search-bar:hover {
   box-shadow: 1px 1px 8px 1px #dcdcdc;
 }
 
-.search-bar:focus-within{
+#search-bar:focus-within{
   box-shadow: 1px 1px 8px 1px #dcdcdc;
   outline:none;
 }
