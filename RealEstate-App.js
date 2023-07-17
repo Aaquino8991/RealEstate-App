@@ -10,13 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     data.autocomplete.forEach(city => {
       const element = document.createElement('ul');
+      const listItem = document.createElement('li')
       element.textContent = city;
-      document.getElementById('house-list').appendChild('ul')
+      element.appendChild(listItem);
+      document.getElementById('house-list').appendChild(element);
     })
     
   }
   
   // Fetch data from API
+  function fetchData(city) {
   fetch(url, {
     method: 'GET',
     headers: {
@@ -26,12 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   .then (res => res.json())
-  .then (data => homeList(data))
+  .then (data => console.log(homeList(data)))
   .catch(error => console.error(error));
-},
+};
 
-  document.getElementById('searchButton').addEventListener('click', () => {
+  //Event listener for the search button
+  document.getElementById('searchButton').addEventListener('click', function() {
     const searchInput = document.getElementById('search-bar').value;
     fetchData(searchInput);
-  })
-);
+  });
+});
