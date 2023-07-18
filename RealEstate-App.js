@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '9653b74712msh64886888560e290p11bab2jsndede80dd8415',
-      'X-RapidAPI-Host': 'realty-in-us.p.rapidapi.com'
+      'X-RapidAPI-Key': myKey,
+      'X-RapidAPI-Host': host
     }
   };
 
