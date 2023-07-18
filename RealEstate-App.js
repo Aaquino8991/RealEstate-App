@@ -1,41 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   const myKey = config.MY_KEY;
   const host = config.HOST;
 
-  const url = 'https://realty-in-us.p.rapidapi.com/locations/v2/auto-complete?input=new%20york&limit=10';
-
-  // Create elements for each city
-  function homeList(data) {
-
-    data.autocomplete.forEach(city => {
-      const element = document.createElement('ul');
-      const listItem = document.createElement('li')
-      element.textContent = city;
-      element.appendChild(listItem);
-      document.getElementById('house-list').appendChild(element);
-    })
-    
-  }
-  
-  // Fetch data from API
-  function fetchData(city) {
-  fetch(url, {
+  const url = 'https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=NY&city=New%20York%20City&offset=0&limit=200&sort=relevance';
+  const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': myKey,
-      'X-RapidAPi-Host': host
+      'X-RapidAPI-Key': '9653b74712msh64886888560e290p11bab2jsndede80dd8415',
+      'X-RapidAPI-Host': 'realty-in-us.p.rapidapi.com'
     }
-  })
+  };
 
-  .then (res => res.json())
-  .then (data => console.log(homeList(data)))
-  .catch(error => console.error(error));
-};
+  async function fetchForSale() {
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-  //Event listener for the search button
-  document.getElementById('searchButton').addEventListener('click', function() {
-    const searchInput = document.getElementById('search-bar').value;
-    fetchData(searchInput);
-  });
+  fetchForSale();
 });
