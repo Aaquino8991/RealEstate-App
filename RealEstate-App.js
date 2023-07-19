@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  async function fetchForSale(cityInput) {
+  async function fetchForSale(cityInput, stateCode) {
     try {
       const encodedCity = encodeURIComponent(cityInput);
-      const url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=NY&city=${encodedCity}&offset=0&limit=200&sort=relevance`;
+      const encodedState = encodeURIComponent(stateCode);
+      const url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${encodedState}&city=${encodedCity}&offset=0&limit=200&sort=relevance`;
       
       
       const response = await fetch(url, options);
@@ -29,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   searchBtn.addEventListener('click', () => {
-    const cityInput = document.getElementById('search-bar').value;
-    fetchForSale(cityInput);
+    const cityInput = document.getElementById('cityInput').value;
+    const stateCode = document.getElementById('stateCode').value
+    fetchForSale(cityInput, stateCode);
   })
 });
 

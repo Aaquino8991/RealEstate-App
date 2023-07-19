@@ -16,16 +16,30 @@ body {
   text-align: center;
 }
 
-#search-bar {
+#cityInput {
   border-radius: 50px;
   background-color: #5C6278;
 }
 
-#search-bar:hover {
+#cityInput:hover {
   box-shadow: 1px 1px 8px 1px #dcdcdc;
 }
 
-#search-bar:focus-within{
+#cityInput:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
+}
+
+#stateCode {
+  border-radius: 50px;
+  background-color: #5C6278;
+}
+
+#stateCode:hover {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+
+#stateCode:focus-within{
   box-shadow: 1px 1px 8px 1px #dcdcdc;
   outline:none;
 }
