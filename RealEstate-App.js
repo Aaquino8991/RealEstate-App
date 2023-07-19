@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const houseCard = document.createElement('div');
         contentBox.appendChild(houseCard);
         houseCard.innerHTML = `
+          <img src=${element.photo}>
           <h3>${element.address}</h3>
           <h4>${element.price}</h4>
         `
