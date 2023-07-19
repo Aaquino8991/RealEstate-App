@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const encodedCity = encodeURIComponent(cityInput);
       const encodedState = encodeURIComponent(stateCode);
-      const url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${encodedState}&city=${encodedCity}&offset=0&limit=200&sort=relevance`;
+      const url = `https://realty-in-us.p.rapidapi.com/properties/list-for-sale?state_code=${encodedState}&city=${encodedCity}&offset=0&limit=5&sort=relevance`;
       
       
       const response = await fetch(url, options);
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       
       const listings = result.listings
-      console.log(listings)
+      listings.forEach(element => console.log(element))
     } catch (error) {
       console.error(error);
     }
