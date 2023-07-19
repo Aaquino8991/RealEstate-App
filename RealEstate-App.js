@@ -23,7 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
       
       
       const listings = result.listings
-      listings.forEach(element => console.log(element))
+      listings.forEach(element => {
+        const contentBox = document.getElementById('content-box');
+        const houseCard = document.createElement('div');
+        contentBox.appendChild(houseCard);
+        houseCard.innerHTML = `
+          <h3>${element.address}</h3>
+        `
+        console.log(element)
+      })
     } catch (error) {
       console.error(error);
     }
