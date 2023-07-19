@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src=${element.photo}>
           <h3>${element.address}</h3>
           <h4>${element.price}</h4>
-          <p>${element.beds} beds/${element.baths}</p>
+          <p>${element.beds} beds/${element.baths} baths</p>
         `
         console.log(element)
       })
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   searchBtn.addEventListener('click', () => {
+    const contentBox = document.getElementById('content-box');
+    contentBox.innerHTML = ''
+
     const cityInput = document.getElementById('cityInput').value;
     const stateCode = document.getElementById('stateCode').value
     fetchForSale(cityInput, stateCode);
