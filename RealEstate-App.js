@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src=${element.photo}>
           <h3>${element.address}</h3>
           <h4>${element.price}</h4>
+          <p>${element.beds} beds/${element.baths}</p>
         `
         console.log(element)
       })
