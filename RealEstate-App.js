@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contentBox.appendChild(houseCard);
         houseCard.innerHTML = `
           <h3>${element.address}</h3>
+          <h4>${element.price}</h4>
         `
         console.log(element)
       })
