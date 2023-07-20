@@ -32,11 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentBox = document.getElementById('content-box');
         const houseCard = document.createElement('div');
         contentBox.appendChild(houseCard);
+        houseCard.style.margin = '25px';
+        houseCard.style.width = '50px';
         houseCard.innerHTML = `
-          <img src=${element.photo}>
+          <img src=${element.photo} width = '100px'>
           <h3>${element.address}</h3>
           <h4>${element.price}</h4>
           <p>${element.beds} beds/${element.baths} baths</p>`
+
+        houseCard.addEventListener('mouseover', () => {
+          houseCard.style.boxShadow = '1px 1px 8px 1px #525252';
+          houseCard.addEventListener('mouseout', () => {
+            houseCard.style.boxShadow = 'none';
+          })
+        })
       })
 
     //Log error if fetch does not return anything

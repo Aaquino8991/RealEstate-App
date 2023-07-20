@@ -15,31 +15,3 @@ body {
   margin-top: -100px;
   text-align: center;
 }
-
-/* #cityInput {
-  border-radius: 50px;
-  background-color: #ffffff;
-}
-
-#cityInput:hover {
-  box-shadow: 1px 1px 8px 1px #525252;
-}
-
-#cityInput:focus-within{
-  box-shadow: 1px 1px 8px 1px #525252;
-  outline:none;
-}
-
-#stateCode {
-  border-radius: 50px;
-  background-color: #ffffff;
-}
-
-#stateCode:hover {
-  box-shadow: 1px 1px 8px 1px #525252;
-}
-
-#stateCode:focus-within{
-  box-shadow: 1px 1px 8px 1px #525252;
-  outline:none;
-} */
