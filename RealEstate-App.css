@@ -1,11 +1,11 @@
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #5C6278;
+  background-color: #ffffff;
 }
 
 #wrapper {
-  padding: 10%;
-  border: 3px solid whitesmoke;
+  padding: 80px;
+  border: 3px solid rgb(212, 212, 212);
 
   margin: 0 auto;
 }
@@ -16,30 +16,30 @@ body {
   text-align: center;
 }
 
-#cityInput {
+/* #cityInput {
   border-radius: 50px;
-  background-color: #5C6278;
+  background-color: #ffffff;
 }
 
 #cityInput:hover {
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  box-shadow: 1px 1px 8px 1px #525252;
 }
 
 #cityInput:focus-within{
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  box-shadow: 1px 1px 8px 1px #525252;
   outline:none;
 }
 
 #stateCode {
   border-radius: 50px;
-  background-color: #5C6278;
+  background-color: #ffffff;
 }
 
 #stateCode:hover {
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  box-shadow: 1px 1px 8px 1px #525252;
 }
 
 #stateCode:focus-within{
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  box-shadow: 1px 1px 8px 1px #525252;
   outline:none;
-}
+} */
