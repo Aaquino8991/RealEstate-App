@@ -55,7 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchForSale(cityInput, stateCode);
   })
 
-  
+  const inputs = [ cityInput, stateCode ];
+    
+  inputs.forEach((input) => {
+    input.addEventListener('mouseover', () => {
+      input.style.boxShadow = '1px 1px 8px 1px #525252';
+      input.addEventListener('mouseout', ()=> {
+        input.style.boxShadow = 'none';
+      })
+    })
+  })
     
 
 });
