@@ -27,19 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
       //listings will wait for result to finish it's process
       const listings = result.listings
 
-      //Iterate through all the data in listings and create a div the info for each
+      //Iterate through all the data in listings
       listings.forEach(element => {
         const contentBox = document.getElementById('content-box');
         const houseCard = document.createElement('div');
         contentBox.appendChild(houseCard);
-        houseCard.style.margin = '25px';
-        houseCard.style.width = '50px';
+        //Style div and add data
+        houseCard.style.margin = '35px';
+        houseCard.style.width = '255px';
+        houseCard.style.display = 'inline-block';
         houseCard.innerHTML = `
-          <img src=${element.photo} width = '100px'>
+          <img src=${element.photo} width = '200px'>
           <h3>${element.address}</h3>
           <h4>${element.price}</h4>
           <p>${element.beds} beds/${element.baths} baths</p>`
-
+        
         houseCard.addEventListener('mouseover', () => {
           houseCard.style.boxShadow = '1px 1px 8px 1px #525252';
           houseCard.addEventListener('mouseout', () => {
